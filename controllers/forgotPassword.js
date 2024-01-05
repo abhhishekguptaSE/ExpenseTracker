@@ -34,7 +34,7 @@ const forgotPassword = async (req, res) => {
     apiKey.apiKey = process.env.API_KEY_BREVO;
     const transEmailApi = new Sib.TransactionalEmailsApi();
     const sender = {
-      email: "ayushnigam95530@gmail.com",
+      email: "abhishekguptase77@gmail.com",
       name: "Expense-Tracker",
     };
     const receivers = [
@@ -48,7 +48,7 @@ const forgotPassword = async (req, res) => {
       subject: "Expense Tracker Reset Password",
       textContent: "Link Below",
       htmlContent: `<h3>Hi! We got the request from you for resetting the password. Here is the link below >>></h3>
-      <a href="http://54.197.148.201/password/resetPassword/${requestId}"> Click Here</a>`,
+      <a href="http://localhost/password/resetPassword/${requestId}"> Click Here</a>`,
       params: {
         requestId: requestId,
       },
